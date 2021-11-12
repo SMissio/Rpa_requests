@@ -8,7 +8,7 @@ import pyautogui as posicaoMouse
 import pyautogui as login
 caminhoArquivo = "C:\\Users\\SylviaSusiBezerraMis\\Desktop\\RPA.p\\Novo Formulario 2\\Emitir.xlsx"
 
-
+login.alert("O codigo vai iniciar aguardar finalização")
 
 plan_open = load_workbook(filename=caminhoArquivo)
 
@@ -66,7 +66,7 @@ for i in range(2, len(sheet_selecionada['A']) + 1):
     tempoEspera.sleep(4)
     posicaoMouse.click(x=1399, y=861)
     tempoEspera.sleep(60)
-    #escolhendot480
+    #escolhendotEquipamento
     posicaoMouse.click(x=502, y=703)
     tempoEspera.sleep(3)
     posicaoMouse.click(x=1342, y=846)
@@ -110,4 +110,21 @@ for i in range(2, len(sheet_selecionada['A']) + 1):
     tempoEspera.sleep(3)
     posicaoMouse.click(x=1476, y=207)
     tempoEspera.sleep(3)
+    #copiar request
+    posicaoMouse.doubleClick(x=553, y=487)
+    tempoEspera.sleep(3)
+    posicaoMouse.hotkey('ctrl', 'c')
+    tempoEspera.sleep(3)
+    posicaoMouse.click(x=1379, y=1055)
+    tempoEspera.sleep(1)
+    posicaoMouse.hotkey('ctrl', 'v')
+    tempoEspera.sleep(1)
+    posicaoMouse.press('enter')
     posicaoMouse.click(x=1291, y=1054)
+#Salvandonote    
+posicaoMouse.click(x=1379, y=1055)
+tempoEspera.sleep(2)
+posicaoMouse.click(x=984, y=90)
+tempoEspera.sleep(2)
+posicaoMouse.click(x=1020, y=209)
+login.alert("O codigo Finalizou")
