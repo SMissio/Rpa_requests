@@ -77,7 +77,7 @@ for i in range(2, len(sheet_selecionada['A']) + 1):
     tempoEspera.sleep(5)
     if equipamento == "T460":
         posicaoMouse.click('C:\\Users\\SylviaSusiBezerraMis\\Downloads\\botao3.PNG')
-    elif equipamento == "Lenovo ThinkPad P15":
+    elif equipamento == "P15":
         posicaoMouse.click('C:\\Users\\SylviaSusiBezerraMis\\Downloads\\botao4.PNG')
     tempoEspera.sleep(8)
     posicaoMouse.click(x=1342, y=846)
